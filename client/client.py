@@ -108,7 +108,7 @@ while True:
 
 
     elif command != "":
-        proc = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        proc = subprocess.Popen(command, shell=False, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output, error = proc.communicate()
         if error != b"":
             error_response()    
